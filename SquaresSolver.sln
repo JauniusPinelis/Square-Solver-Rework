@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquaresSolver.Api", "src\SquaresSolver.Api\SquaresSolver.Api.csproj", "{52C54F8E-04E6-4178-BDC5-4AE01DB8D5C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3959CBDD-14B4-47AC-B309-A83A431D51D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F0D761C4-A3BF-467B-808A-3511DCC4478D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquaresSolver.Application", "src\SquaresSolver.Application\SquaresSolver.Application.csproj", "{9DEF337E-74CF-4ECA-B9E2-4A145AD97934}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquaresSolver.Domain", "src\SquaresSolver.Domain\SquaresSolver.Domain.csproj", "{AC16735E-07F8-43B4-BAAE-5BCAB070D1C4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquaresSolver.Database", "src\SquaresSolver.Database\SquaresSolver.Database.csproj", "{30F933A8-A837-463D-9FDF-D50A88A9BAE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52C54F8E-04E6-4178-BDC5-4AE01DB8D5C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52C54F8E-04E6-4178-BDC5-4AE01DB8D5C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52C54F8E-04E6-4178-BDC5-4AE01DB8D5C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52C54F8E-04E6-4178-BDC5-4AE01DB8D5C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DEF337E-74CF-4ECA-B9E2-4A145AD97934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DEF337E-74CF-4ECA-B9E2-4A145AD97934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DEF337E-74CF-4ECA-B9E2-4A145AD97934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DEF337E-74CF-4ECA-B9E2-4A145AD97934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC16735E-07F8-43B4-BAAE-5BCAB070D1C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC16735E-07F8-43B4-BAAE-5BCAB070D1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC16735E-07F8-43B4-BAAE-5BCAB070D1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC16735E-07F8-43B4-BAAE-5BCAB070D1C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30F933A8-A837-463D-9FDF-D50A88A9BAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30F933A8-A837-463D-9FDF-D50A88A9BAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30F933A8-A837-463D-9FDF-D50A88A9BAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30F933A8-A837-463D-9FDF-D50A88A9BAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{52C54F8E-04E6-4178-BDC5-4AE01DB8D5C7} = {3959CBDD-14B4-47AC-B309-A83A431D51D2}
+		{9DEF337E-74CF-4ECA-B9E2-4A145AD97934} = {3959CBDD-14B4-47AC-B309-A83A431D51D2}
+		{AC16735E-07F8-43B4-BAAE-5BCAB070D1C4} = {3959CBDD-14B4-47AC-B309-A83A431D51D2}
+		{30F933A8-A837-463D-9FDF-D50A88A9BAE4} = {3959CBDD-14B4-47AC-B309-A83A431D51D2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD6D6D94-092E-4CF0-A685-6342A3A915A6}
+	EndGlobalSection
+EndGlobal
