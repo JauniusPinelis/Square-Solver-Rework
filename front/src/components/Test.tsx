@@ -1,8 +1,17 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-export default class Test extends Component {
-  state = {
+interface IPointObject {
+  x: number;
+  y: number;
+}
+
+interface IState {
+  points: IPointObject[];
+}
+
+export default class Test extends Component<any, IState> {
+  state: IState = {
     points: []
   };
   componentDidMount() {
