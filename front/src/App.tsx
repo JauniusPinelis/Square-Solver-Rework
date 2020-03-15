@@ -1,11 +1,14 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
 
-import Test from "./components/Test";
+import PointsTable from "./components/PointsTable";
 
 function App() {
   return (
     <div className="App">
-      <Test />
+      <Container>
+        <PointsTable />
+      </Container>
     </div>
   );
 }
