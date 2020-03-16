@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\SquaresSolver.Database\SquaresSolver.Database.csproj" />
     <ProjectReference Include="..\SquaresSolver.Application\SquaresSolver.Application.csproj" />
+    <ProjectReference Include="..\SquaresSolver.Database\SquaresSolver.Database.csproj" />
   </ItemGroup>
 
 

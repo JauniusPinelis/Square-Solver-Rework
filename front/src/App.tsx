@@ -34,6 +34,12 @@ class App extends Component {
       this.setState({ points });
     });
   }
+  addPoint(point: PointObject) {
+    axios.post(`/points/`, point).then(res => {
+      const points = this.state.points.push(point);
+      this.setState({ points });
+    });
+  }
   render(): ReactNode {
     return (
       <div className="App">
@@ -46,7 +52,7 @@ class App extends Component {
               />
             </Col>
             <Col>
-              <AddPointForm />
+              <AddPointForm addPoint={this.addPoint} />
             </Col>
           </Row>
         </Container>

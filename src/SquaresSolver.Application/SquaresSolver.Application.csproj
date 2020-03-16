@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\SquaresSolver.Database\SquaresSolver.Database.csproj" />
+    <ProjectReference Include="..\SquaresSolver.Database\SquaresSolver.Database.csproj" />
+    <ProjectReference Include="..\SquaresSolver.Domain\SquaresSolver.Domain.csproj" />
   </ItemGroup>
 
 </Project>

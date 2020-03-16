@@ -26,7 +26,7 @@ namespace SquaresSolver.Api.Controllers
             => Ok(await new GetPoints(_ctx).Do());
 
         [HttpPost]
-        public async Task<ActionResult> PostPoint(AddPoint.Request request) 
+        public async Task<ActionResult> PostPoint([FromBody]AddPoint.Request request) 
             => Ok(await new AddPoint(_ctx).Do(request));
 
         public async Task<ActionResult> DeletePoint(DeletePoint.Request request)
