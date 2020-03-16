@@ -1,5 +1,4 @@
 import React, { PureComponent, ReactNode } from "react";
-import axios from "axios";
 
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
@@ -9,27 +8,14 @@ interface PointObject {
   y: number;
 }
 
-interface State {
+interface Props {
+  deletePoint: Function;
   points: PointObject[];
 }
 
-interface Props {}
-
-class PointsTable extends PureComponent<Props, State> {
-  state: State = {
-    points: []
-  };
-  componentDidMount() {
-    axios.get(`/points`).then(res => {
-      const points = res.data;
-      this.setState({ points });
-    });
-  }
+class PointsTable extends PureComponent<Props> {
   deletePoint(point: PointObject) {
-    axios.delete(`/points/`, { data: { x: point.x, y: point.y } }).then(res => {
-      const points = this.state.points.splice(1, 1);
-      this.setState({ points });
-    });
+    this.props.deletePoint(point);
   }
   render(): ReactNode {
     return (
@@ -45,7 +31,7 @@ class PointsTable extends PureComponent<Props, State> {
             </tr>
           </thead>
           <tbody>
-            {this.state.points.map((point, i) => (
+            {this.props.points.map((point, i) => (
               <tr key={i}>
                 <td>{i}</td>
                 <td>{point.x}</td>
