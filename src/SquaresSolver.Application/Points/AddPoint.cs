@@ -26,7 +26,6 @@ namespace SquaresSolver.Application.Points
 
             _context.Points.Add(pointEntity);
             
-
             await _context.SaveChangesAsync();
 
             return true;

@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquaresSolver.Domain", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquaresSolver.Database", "src\SquaresSolver.Database\SquaresSolver.Database.csproj", "{30F933A8-A837-463D-9FDF-D50A88A9BAE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquareSolver.Domain.Tests", "Tests\SquareSolver.Domain.Tests\SquareSolver.Domain.Tests.csproj", "{33BF1D8A-8D8D-4181-B74B-2E2B7F120F2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{30F933A8-A837-463D-9FDF-D50A88A9BAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30F933A8-A837-463D-9FDF-D50A88A9BAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30F933A8-A837-463D-9FDF-D50A88A9BAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33BF1D8A-8D8D-4181-B74B-2E2B7F120F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33BF1D8A-8D8D-4181-B74B-2E2B7F120F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33BF1D8A-8D8D-4181-B74B-2E2B7F120F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33BF1D8A-8D8D-4181-B74B-2E2B7F120F2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{9DEF337E-74CF-4ECA-B9E2-4A145AD97934} = {3959CBDD-14B4-47AC-B309-A83A431D51D2}
 		{AC16735E-07F8-43B4-BAAE-5BCAB070D1C4} = {3959CBDD-14B4-47AC-B309-A83A431D51D2}
 		{30F933A8-A837-463D-9FDF-D50A88A9BAE4} = {3959CBDD-14B4-47AC-B309-A83A431D51D2}
+		{33BF1D8A-8D8D-4181-B74B-2E2B7F120F2D} = {F0D761C4-A3BF-467B-808A-3511DCC4478D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AD6D6D94-092E-4CF0-A685-6342A3A915A6}
