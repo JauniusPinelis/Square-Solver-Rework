@@ -30,8 +30,9 @@ class App extends Component {
   }
   deletePoint = (point: PointObject, i: number) => {
     axios.delete(`/points/`, { data: { x: point.x, y: point.y } }).then(res => {
-      const points = this.state.points.splice(i, 1);
-      this.setState({ points });
+      const points = this.state.points;
+      points.splice(i, 1);
+      this.setState({ points: points });
     });
   };
   addPoint = (point: PointObject) => {
