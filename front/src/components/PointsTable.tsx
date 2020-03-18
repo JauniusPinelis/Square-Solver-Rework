@@ -14,8 +14,8 @@ interface Props {
 }
 
 class PointsTable extends PureComponent<Props> {
-  deletePoint(point: PointObject) {
-    this.props.deletePoint(point);
+  deletePoint(point: PointObject, i: Number) {
+    this.props.deletePoint(point, i);
   }
   render(): ReactNode {
     return (
@@ -38,7 +38,7 @@ class PointsTable extends PureComponent<Props> {
                 <td>{point.y}</td>
                 <td>
                   <Button
-                    onClick={() => this.deletePoint(point)}
+                    onClick={() => this.deletePoint(point, i)}
                     variant="warning"
                   >
                     Delete

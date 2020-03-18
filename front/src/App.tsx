@@ -28,18 +28,17 @@ class App extends Component {
       this.setState({ points });
     });
   }
-  deletePoint(point: PointObject) {
+  deletePoint = (point: PointObject, i: number) => {
     axios.delete(`/points/`, { data: { x: point.x, y: point.y } }).then(res => {
-      const points = this.state.points.splice(1, 1);
+      const points = this.state.points.splice(i, 1);
       this.setState({ points });
     });
-  }
-  addPoint(point: PointObject) {
+  };
+  addPoint = (point: PointObject) => {
     axios.post(`/points/`, point).then(res => {
-      const points = this.state.points.push(point);
-      this.setState({ points });
+      this.setState({ points: [...this.state.points, point] });
     });
-  }
+  };
   render(): ReactNode {
     return (
       <div className="App">

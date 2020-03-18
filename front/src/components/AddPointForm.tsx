@@ -8,18 +8,27 @@ interface Props {
 }
 
 interface State {
-  x?: Number;
-  y?: Number;
+  x: Number;
+  y: Number;
 }
 
 class AddPointForm extends PureComponent<Props, State> {
-  state: State = {};
+  state: State = {
+    x: 0,
+    y: 0
+  };
 
-  onChangeX = (event: any) => this.setState({ x: event.target.value });
-  onChangeY = (event: any) => this.setState({ y: event.target.value });
+  onChangeX = (e: any) =>
+    this.setState({
+      x: e.target.type === "number" ? parseInt(e.target.value) : e.target.value
+    });
+  onChangeY = (e: any) =>
+    this.setState({
+      y: e.target.type === "number" ? parseInt(e.target.value) : e.target.value
+    });
 
   addPoint() {
-    const point = {
+    const point: State = {
       x: this.state.x,
       y: this.state.y
     };
@@ -31,7 +40,7 @@ class AddPointForm extends PureComponent<Props, State> {
         <Form.Group controlId="formGroupEmail">
           <Form.Label>X</Form.Label>
           <Form.Control
-            type="text"
+            type="number"
             placeholder="X coordinate"
             onChange={this.onChangeX}
           />
@@ -39,14 +48,12 @@ class AddPointForm extends PureComponent<Props, State> {
         <Form.Group controlId="formGroupPassword">
           <Form.Label>Y</Form.Label>
           <Form.Control
-            type="text"
+            type="number"
             placeholder="Y coordinate"
             onChange={this.onChangeY}
           />
         </Form.Group>
-        <Button variant="primary" onClick={() => this.addPoint()}>
-          Submit
-        </Button>
+        <Button onClick={() => this.addPoint()}>Submit</Button>
       </Form>
     );
   }
