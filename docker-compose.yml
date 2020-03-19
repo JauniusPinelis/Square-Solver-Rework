@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  squaressolver:
+    image: squaressolver
+    build:
+      context: .
+      dockerfile: src/SquaresSolver.Api/Dockerfile
+    ports:
+      - 5000

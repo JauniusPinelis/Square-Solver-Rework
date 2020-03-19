@@ -6,7 +6,6 @@ using System.Collections.Generic;
 
 namespace SquareSolver.Domain.Tests
 {
-    
     public class ValidatorTests
     {
 
