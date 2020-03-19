@@ -7,10 +7,19 @@ namespace SquaresSolver.Domain
 {
     public class Validator
     {
-       public List<PointModel> Points { get; set; } = new List<PointModel>();
+        private readonly IEnumerable<PointModel> _points;
 
-       public ValidationMessage Validate(PointModel point)
-       {
+        public List<PointModel> Points { get; set; } = new List<PointModel>();
+
+        public Validator(IEnumerable<PointModel> points)
+        {
+            _points = points;
+        }
+
+        public ValidationMessage Validate(PointModel point)
+        {
+            if (Points.Contains(point))
+
             if (point.X > 1000 || point.X < -1000 || point.Y > 1000 || point.Y < -100)
             {
                 return new ValidationMessage()
@@ -25,6 +34,6 @@ namespace SquaresSolver.Domain
                 Successfull = true,
                 Message = "Point has been added"
             };
-       }
+        }
     }
 }

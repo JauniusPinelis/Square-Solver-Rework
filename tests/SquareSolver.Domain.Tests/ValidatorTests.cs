@@ -1,19 +1,29 @@
+using FluentAssertions;
 using NUnit.Framework;
+using SquaresSolver.Domain;
+using SquaresSolver.Domain.Models;
+using System.Collections.Generic;
 
 namespace SquareSolver.Domain.Tests
 {
     
-    public class Tests
+    public class ValidatorTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
 
         [Test]
-        public void Test1()
+        public void Validate_Given_EmptyIntialList_ValidateIsSuccessfull()
         {
-            Assert.Pass();
+            var points = new List<PointModel>();
+            var validator = new Validator(points);
+            var point = new PointModel()
+            {
+                X = 1,
+                Y = 2
+            };
+
+            var output = validator.Validate(point);
+
+            output.Successfull.Should().BeTrue();
         }
     }
 }
