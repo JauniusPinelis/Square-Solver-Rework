@@ -10,18 +10,17 @@ services:
       - ACCEPT_EULA=Y
     ports:
       - "1433:1433"
-  squaressolver:
-    image: squaressolver
+  api:
     build:
-      context: .
-      dockerfile: src/SquaresSolver.Api/Dockerfile
-      ports:
-        - "5000:80"
-      depends_on:
-        - mssql
+      context: src/SquaresSolver.Api
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    depends_on:
+      - mssql
   ui:
     build:
-      context: ./front
+      context: front
       dockerfile: Dockerfile
     container_name: front_ui
     restart: on-failure
@@ -32,6 +31,3 @@ services:
       - CHOKIDAR_USEPOLLING=true
     depends_on:
       - api
-    volumes:
-      - ./front/src:/ui/src
-      - "/ui/node_modules"
