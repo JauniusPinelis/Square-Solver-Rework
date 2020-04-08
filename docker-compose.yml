@@ -1,4 +1,4 @@
-version: '3.4'
+version: "3.4"
 
 services:
   squaressolver.api:
@@ -6,8 +6,10 @@ services:
     build:
       context: .
       dockerfile: src/SquaresSolver.Api/Dockerfile
+    ports:
+      - 8000:80
   db:
-      image: "mcr.microsoft.com/mssql/server"
-      environment:
-          SA_PASSWORD: "Your_password123"
-          ACCEPT_EULA: "Y"
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+      SA_PASSWORD: "Your_password123"
+      ACCEPT_EULA: "Y"
