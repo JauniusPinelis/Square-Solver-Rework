@@ -1,33 +1,13 @@
-version: "3.4"
+version: '3.4'
 
 services:
-  mssql:
-    image: mcr.microsoft.com/mssql/server
-    container_name: mssql
-    restart: on-failure
-    environment:
-      - SA_PASSWORD=adminpass1
-      - ACCEPT_EULA=Y
-    ports:
-      - "1433:1433"
-  api:
+  squaressolver.api:
+    image: ${DOCKER_REGISTRY-}squaressolverapi
     build:
-      context: src/SquaresSolver.Api
-      dockerfile: Dockerfile
-    ports:
-      - "5000:80"
-    depends_on:
-      - mssql
-  ui:
-    build:
-      context: front
-      dockerfile: Dockerfile
-    container_name: front_ui
-    restart: on-failure
-    ports:
-      - "5001:3000"
-    environment:
-      - NODE_ENV=development
-      - CHOKIDAR_USEPOLLING=true
-    depends_on:
-      - api
+      context: .
+      dockerfile: src/SquaresSolver.Api/Dockerfile
+  db:
+      image: "mcr.microsoft.com/mssql/server"
+      environment:
+          SA_PASSWORD: "Your_password123"
+          ACCEPT_EULA: "Y"

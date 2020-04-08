@@ -1,11 +1,14 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
-EXPOSE 5000
-ENV ASPNETCORE_URLS=http://*:5000
+EXPOSE 80
+EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["src/SquaresSolver.Api/SquaresSolver.Api.csproj", "src/SquaresSolver.Api/"]
+COPY ["src/SquaresSolver.Application/SquaresSolver.Application.csproj", "src/SquaresSolver.Application/"]
+COPY ["src/SquaresSolver.Domain/SquaresSolver.Domain.csproj", "src/SquaresSolver.Domain/"]
+COPY ["src/SquaresSolver.Database/SquaresSolver.Database.csproj", "src/SquaresSolver.Database/"]
 RUN dotnet restore "src/SquaresSolver.Api/SquaresSolver.Api.csproj"
 COPY . .
 WORKDIR "/src/src/SquaresSolver.Api"
